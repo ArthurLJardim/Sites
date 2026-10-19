@@ -50,4 +50,4 @@ Assim, um site novo fica pronto em pouco tempo e cada cliente continua com um vi
 
 ## Contato
 
-Quer um site para o seu negócio? Me chame pela plataforma em que encontrou este portfólio ou pelo link do portfólio no ar.
+Quer um site para o seu negócio? Fale comigo no Instagram: [@arthurlopesjardim](https://www.instagram.com/arthurlopesjardim/).

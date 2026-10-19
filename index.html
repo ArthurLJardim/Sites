@@ -327,10 +327,23 @@
     whatsapp: "", // só números, com DDI e DDD, ex.: 5564999999999
     email: "",
     perfil: "", // link do perfil no Workana ou 99Freelas
+    instagram: "arthurlopesjardim", // só o usuário, sem o @
   };
 
   const caixa = document.getElementById("contatos");
   const partes = [];
+  if (CONTATO.instagram) {
+    const link = document.createElement("a");
+    link.className = "botao";
+    link.href = "https://www.instagram.com/" + CONTATO.instagram + "/";
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "Falar comigo no Instagram";
+    const arroba = document.createElement("p");
+    arroba.className = "contato__dado";
+    arroba.textContent = "@" + CONTATO.instagram;
+    partes.push(link, arroba);
+  }
   if (CONTATO.whatsapp) {
     const link = document.createElement("a");
     link.className = "botao";
