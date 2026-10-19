@@ -2,7 +2,7 @@
 
 Sites rápidos, com a identidade de cada negócio, pensados para o celular e para levar o cliente direto para o WhatsApp.
 
-**Veja o portfólio no ar:** https://arthurljardim.github.io/Sites
+**Veja o portfólio no ar:** https://arthursites.netlify.app
 
 ![Tela inicial do projeto Patas & Cia](img/patas-e-cia.jpg)
 
@@ -12,11 +12,11 @@ Cinco sites completos para clínicas odontológicas e veterinárias. São projet
 
 | Projeto | Segmento | Estilo | Ver no ar |
 |---|---|---|---|
-| Patas & Cia | Clínica veterinária | Azul-marinho e laranja, títulos condensados, rastro de patinhas | [abrir](https://arthurljardim.github.io/Sites/projetos/patas-e-cia/) |
-| Ateliê do Sorriso | Odontologia e estética | Creme e dourado, serifa em itálico | [abrir](https://arthurljardim.github.io/Sites/projetos/atelie-do-sorriso/) |
-| Coração Pet | Clínica veterinária | Rosa e azul, letra arredondada | [abrir](https://arthurljardim.github.io/Sites/projetos/coracao-pet/) |
-| Flora Odontologia | Odontologia estética | Tons pastéis e verde musgo, folhas ao fundo | [abrir](https://arthurljardim.github.io/Sites/projetos/flora-odontologia/) |
-| Dra. Clara Mendes | Consultório odontológico | Azul-marinho, letra fina em caixa alta, monograma | [abrir](https://arthurljardim.github.io/Sites/projetos/clara-mendes/) |
+| Patas & Cia | Clínica veterinária | Azul-marinho e laranja, títulos condensados, rastro de patinhas | [abrir](https://arthursites.netlify.app/projetos/patas-e-cia/) |
+| Ateliê do Sorriso | Odontologia e estética | Creme e dourado, serifa em itálico | [abrir](https://arthursites.netlify.app/projetos/atelie-do-sorriso/) |
+| Coração Pet | Clínica veterinária | Rosa e azul, letra arredondada | [abrir](https://arthursites.netlify.app/projetos/coracao-pet/) |
+| Flora Odontologia | Odontologia estética | Tons pastéis e verde musgo, folhas ao fundo | [abrir](https://arthursites.netlify.app/projetos/flora-odontologia/) |
+| Dra. Clara Mendes | Consultório odontológico | Azul-marinho, letra fina em caixa alta, monograma | [abrir](https://arthursites.netlify.app/projetos/clara-mendes/) |
 
 <p>
   <img src="img/atelie-do-sorriso.jpg" alt="Ateliê do Sorriso" width="49%">
