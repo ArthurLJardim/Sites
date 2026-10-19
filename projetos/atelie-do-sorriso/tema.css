@@ -1,0 +1,44 @@
+/* Tema Ateliê do Sorriso: creme e dourado, títulos serifados em itálico e aros dourados ao fundo.
+   Projeto demonstrativo com marca fictícia. Fica por cima do styles.css do modelo; só o visual muda. */
+:root {
+  --creme: #f7f1e1;
+  --ouro: #d7a531;
+  --cor-escura: #7d5a10;
+  --cor-suave: #fbf6ea;
+  --texto: #2d2618;
+  --texto-suave: #6b604b;
+  --borda: #eadfc4;
+  --fundo: #fffdf8;
+  --raio: 14px;
+}
+
+h1, h2, .marca, .destaques strong { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-style: italic; }
+h1 { font-size: clamp(2.5rem, 5.8vw, 4rem); line-height: 1.05; color: var(--texto); }
+h1 em { color: var(--cor); }
+h2 { font-size: clamp(2.1rem, 4.4vw, 2.9rem); color: var(--texto); }
+.marca { font-size: 1.5rem; color: var(--cor); }
+.topo { background: rgba(247, 241, 225, .96); } /* mesmo creme da logo, para ela não aparecer como um retângulo */
+.etiqueta { color: var(--cor); letter-spacing: .16em; }
+
+/* Topo creme com aros dourados */
+.hero { position: relative; overflow: hidden; background: var(--creme); }
+.hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.hero::before { width: 520px; height: 520px; right: -170px; top: -200px; border: 1.5px solid rgba(215, 165, 49, .5); box-shadow: 0 0 0 26px rgba(215, 165, 49, .07); }
+.hero::after { width: 300px; height: 300px; left: -120px; bottom: -150px; border: 1.5px solid rgba(215, 165, 49, .45); }
+.hero__grade { position: relative; z-index: 1; }
+
+.destaques li { border: 0; border-bottom: 2px solid var(--ouro); background: #fffdf8; box-shadow: 0 10px 26px rgba(125, 90, 16, .08); }
+.destaques strong { color: var(--cor); font-size: 1.8rem; }
+
+.cartao { border-color: var(--borda); }
+.cartao h3::before { background: var(--ouro); height: 2px; width: 44px; }
+.secao--suave { background: var(--cor-suave); }
+.lista-check li::before { color: var(--ouro); }
+.faq { border-color: var(--borda); }
+
+.rodape { background: #2d2618; color: #eadfc4; border: 0; }
+.rodape a { color: var(--ouro); }
+
+/* Versão de portfólio: sem mapa incorporado */
+.mapa { display: none; }
+.contato { grid-template-columns: 1fr; max-width: 640px; }

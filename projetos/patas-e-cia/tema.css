@@ -1,0 +1,52 @@
+/* Tema Patas & Cia: azul-marinho e laranja, títulos condensados e rastro de patinhas no topo.
+   Projeto demonstrativo com marca fictícia. Fica por cima do styles.css do modelo; só o visual muda. */
+:root {
+  --marinho: #0d1638;
+  --cor-escura: #b8410a;
+  --cor-suave: #fff3ec;
+  --texto: #141a33;
+  --texto-suave: #5b6177;
+  --borda: #f1dfd4;
+  --raio: 14px;
+}
+
+h1, h2, .marca, .destaques strong, .cartao h3 {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .01em;
+}
+h1 { font-size: clamp(2.6rem, 6.4vw, 4.4rem); line-height: 1; }
+h2 { font-size: clamp(2rem, 4.6vw, 3rem); color: var(--marinho); }
+.cartao h3 { font-weight: 700; font-size: 1.35rem; color: var(--marinho); }
+.marca { color: var(--marinho); font-size: 1.6rem; }
+.marca__logo { width: 48px; height: 48px; }
+.botao { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.15rem; text-transform: uppercase; letter-spacing: .04em; }
+
+/* Topo azul-marinho com rastro de patinhas */
+.hero {
+  position: relative; overflow: hidden;
+  background: radial-gradient(circle at 85% 0%, #1d2a63 0%, transparent 55%), var(--marinho);
+}
+.hero::before {
+  content: ""; position: absolute; pointer-events: none; opacity: .22;
+  width: min(760px, 95vw); aspect-ratio: 600 / 340; right: -60px; bottom: -40px;
+  background: url("patas.svg") center / contain no-repeat;
+}
+.hero__grade { position: relative; z-index: 1; }
+.hero h1 { color: #fff; }
+.hero .etiqueta { color: #ff8a4c; letter-spacing: .14em; }
+.hero__sub, .hero__fone { color: #c5cbe0; }
+.hero__fone strong { color: #fff; }
+
+.destaques li { background: #fff; border: 0; border-top: 5px solid var(--cor); box-shadow: 0 16px 34px rgba(0, 0, 0, .25); }
+.destaques strong { color: var(--marinho); font-size: 1.9rem; }
+
+.cartao h3::before { height: 5px; }
+.secao--suave { background: var(--cor-suave); }
+.lista-check li::before { color: var(--cor); }
+
+.rodape { background: var(--marinho); color: #c5cbe0; border: 0; }
+.rodape a { color: #ff8a4c; }
+
+/* Versão de portfólio: sem mapa incorporado */
+.mapa { display: none; }
+.contato { grid-template-columns: 1fr; max-width: 640px; }

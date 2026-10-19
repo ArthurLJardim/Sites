@@ -1,0 +1,51 @@
+/* Tema Coração Pet: rosa e azul, letra arredondada, corações e sinais de + ao fundo.
+   Projeto demonstrativo com marca fictícia. Fica por cima do styles.css do modelo; só o visual muda. */
+:root {
+  --azul: #1ea5c9;
+  --cor-escura: #b8245a;
+  --cor-suave: #fdf0f4;
+  --texto: #2b2430;
+  --texto-suave: #6a6070;
+  --borda: #f5dbe5;
+  --raio: 22px;
+}
+
+h1, h2, .marca, .destaques strong, .cartao h3 { font-family: Fredoka, system-ui, sans-serif; font-weight: 600; }
+h1 { font-size: clamp(2.3rem, 5.4vw, 3.6rem); }
+h1 em { color: var(--cor); }
+h2 { color: var(--cor-escura); }
+.marca { color: var(--cor); font-size: 1.45rem; }
+/* No topo, só o coração com o cão e o gato (recortado da logo) ao lado do nome */
+.marca__logo { width: auto; height: 44px; border-radius: 0; object-fit: contain; }
+.etiqueta { color: var(--azul); }
+.botao { font-family: Fredoka, system-ui, sans-serif; font-weight: 600; font-size: 1.05rem; box-shadow: 0 8px 20px rgba(226, 61, 116, .3); }
+
+/* Topo claro com corações e "+" ao fundo, e a logo acima do título */
+.hero { position: relative; overflow: hidden; background: linear-gradient(160deg, #fff 0%, #fff 45%, var(--cor-suave) 100%); }
+.hero::before {
+  content: ""; position: absolute; pointer-events: none; opacity: .18;
+  width: min(520px, 70vw); aspect-ratio: 1; right: -90px; top: -60px;
+  background: url("coracoes.svg") center / contain no-repeat;
+}
+.hero::after {
+  content: ""; position: absolute; pointer-events: none; opacity: .12;
+  width: 260px; aspect-ratio: 1; left: -70px; bottom: -80px; transform: rotate(160deg);
+  background: url("coracoes.svg") center / contain no-repeat;
+}
+.hero__grade { position: relative; z-index: 1; }
+
+.destaques li { border: 2px solid var(--borda); box-shadow: none; }
+.destaques li:nth-child(2) strong { color: var(--azul); }
+.destaques strong { color: var(--cor); }
+
+.cartao { border: 2px solid var(--borda); }
+.cartao h3::before { background: linear-gradient(90deg, var(--cor), var(--azul)); height: 6px; border-radius: 6px; }
+.lista-check li::before { color: var(--azul); }
+.faq { border-color: var(--borda); }
+
+.rodape { background: var(--cor-escura); color: #fde3ec; border: 0; }
+.rodape a { color: #fff; }
+
+/* Versão de portfólio: sem mapa incorporado */
+.mapa { display: none; }
+.contato { grid-template-columns: 1fr; max-width: 640px; }

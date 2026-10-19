@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 340" fill="#f25a0f">
+  <defs>
+    <g id="pata">
+      <ellipse cx="0" cy="14" rx="18" ry="15"/>
+      <ellipse cx="-20" cy="-9" rx="7" ry="10" transform="rotate(-20 -20 -9)"/>
+      <ellipse cx="-7" cy="-21" rx="7" ry="10"/>
+      <ellipse cx="8" cy="-21" rx="7" ry="10"/>
+      <ellipse cx="21" cy="-9" rx="7" ry="10" transform="rotate(20 21 -9)"/>
+    </g>
+  </defs>
+  <use xlink:href="#pata" href="#pata" transform="translate(40 300) rotate(55) scale(.8)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(100 265) rotate(55) scale(.8)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(150 245) rotate(55) scale(.85)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(210 205) rotate(55) scale(.85)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(262 188) rotate(55) scale(.9)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(322 148) rotate(55) scale(.9)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(375 132) rotate(55) scale(.95)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(435 92) rotate(55) scale(.95)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(488 76) rotate(55)"/>
+  <use xlink:href="#pata" href="#pata" transform="translate(548 36) rotate(55)"/>
+</svg>

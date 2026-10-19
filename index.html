@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Arthur cria sites e landing pages para clínicas e pequenos negócios: rápidos, com a identidade da marca e botão direto para o WhatsApp. Veja cinco projetos completos.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfólio de Arthur · Sites e landing pages">
+<meta property="og:description" content="Sites rápidos, com a identidade do negócio e botão direto para o WhatsApp. Veja cinco projetos completos.">
+<meta property="og:image" content="https://arthurljardim.github.io/Sites/img/patas-e-cia.jpg">
+<meta property="og:url" content="https://arthurljardim.github.io/Sites/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Portfólio de Arthur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Vitrine: o trabalho é o protagonista. Texto curto à esquerda, telas reais dos sites à direita,
+     e cada projeto apresentado dentro de uma janela de navegador. */
+  :root {
+    --bg: #eef1f5;
+    --surface: #ffffff;
+    --ink: #121826;
+    --muted: #586274;
+    --line: #d9dfe8;
+    --accent: #2747d8;
+    --accent-ink: #ffffff;
+    --sol: #f5a524;
+    --chrome: #e4e8ef;
+
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+    --step-0: 1rem;
+    --step-1: 1.125rem;
+    --step-2: clamp(1.4rem, 2.4vw, 1.75rem);
+    --step-3: clamp(2rem, 4.2vw, 2.9rem);
+    --step-4: clamp(2.4rem, 6vw, 4.4rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d121b; --surface: #151c28; --ink: #e9eef6; --muted: #9ba7b9; --line: #263043;
+      --accent: #7f95ff; --accent-ink: #0d121b; --sol: #ffbe55; --chrome: #1d2533;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d121b; --surface: #151c28; --ink: #e9eef6; --muted: #9ba7b9; --line: #263043;
+    --accent: #7f95ff; --accent-ink: #0d121b; --sol: #ffbe55; --chrome: #1d2533;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--body); font-size: var(--step-0); line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: var(--display); line-height: 1.06; margin: 0; text-wrap: balance; letter-spacing: -.02em; }
+  h1 { font-size: var(--step-4); font-weight: 800; }
+  h2 { font-size: var(--step-3); font-weight: 800; }
+  h3 { font-size: var(--step-1); font-weight: 600; letter-spacing: -.01em; }
+  p { margin: 0; color: var(--muted); max-width: 62ch; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  .faixa { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .miolo { width: min(1160px, 100%); margin-inline: auto; }
+  .rotulo { font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+  /* Topo */
+  .topo {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topo .miolo { display: flex; align-items: center; gap: 24px; padding-block: 14px; }
+  .assinatura { font-family: var(--display); font-weight: 800; font-size: 1.35rem; text-decoration: none; letter-spacing: -.02em; }
+  .assinatura span { color: var(--accent); }
+  .menu { display: flex; gap: 22px; margin-left: auto; }
+  .menu a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: .95rem; }
+  .menu a:hover { color: var(--ink); }
+
+  .botao {
+    display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600;
+    padding: 13px 22px; border-radius: 10px; background: var(--accent); color: var(--accent-ink);
+    border: 1px solid var(--accent); transition: transform .15s;
+  }
+  .botao:hover { transform: translateY(-2px); }
+  .botao--vazado { background: transparent; color: var(--ink); border-color: var(--line); }
+
+  /* Abertura */
+  .abertura .miolo {
+    display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center;
+    padding-block: clamp(48px, 8vw, 96px);
+  }
+  .abertura__texto { display: grid; gap: 22px; min-width: 0; }
+  .abertura h1 em { font-style: normal; color: var(--accent); }
+  .abertura p { font-size: var(--step-1); }
+  .acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+  .marcas-pequenas { display: flex; flex-wrap: wrap; gap: 8px; }
+  .marcas-pequenas span {
+    font-family: var(--mono); font-size: .78rem; padding: 5px 10px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--muted); background: var(--surface);
+  }
+
+  /* Janela de navegador que emoldura cada tela */
+  .janela { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 18px 40px rgba(18, 24, 38, .12); }
+  .janela__barra { display: flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--chrome); border-bottom: 1px solid var(--line); }
+  .janela__barra i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+  .janela__barra code { margin-left: 8px; font-family: var(--mono); font-size: .72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .janela img { display: block; width: 100%; height: auto; aspect-ratio: 1568 / 739; object-fit: cover; object-position: top; }
+
+  .leque { position: relative; min-height: 420px; }
+  .leque .janela { position: absolute; width: 78%; }
+  .leque .janela:nth-child(1) { top: 0; left: 0; transform: rotate(-3deg); }
+  .leque .janela:nth-child(2) { top: 26%; right: 0; transform: rotate(2.5deg); }
+  .leque .janela:nth-child(3) { bottom: 0; left: 9%; transform: rotate(-1deg); }
+
+  /* Seções */
+  .secao .miolo { padding-block: clamp(56px, 8vw, 96px); display: grid; gap: 36px; }
+  .secao__cabeca { display: grid; gap: 12px; }
+  .secao--clara { background: var(--surface); border-block: 1px solid var(--line); }
+
+  /* Projetos: dois em destaque e três menores */
+  .projetos { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+  .projeto { grid-column: span 2; display: grid; gap: 14px; text-decoration: none; min-width: 0; }
+  .projeto:nth-child(-n + 2) { grid-column: span 3; }
+  .projeto .janela { transition: transform .2s, box-shadow .2s; }
+  .projeto:hover .janela { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(18, 24, 38, .18); }
+  .projeto__info { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .projeto__abrir { font-weight: 600; color: var(--accent); white-space: nowrap; }
+  .aviso { font-size: .92rem; }
+
+  /* Serviços */
+  .servicos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .servico { display: grid; gap: 12px; align-content: start; padding: 26px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); }
+  .servico ul { margin: 0; padding: 0 0 0 18px; color: var(--muted); display: grid; gap: 6px; }
+  .servico li::marker { color: var(--accent); }
+
+  .inclui { display: flex; flex-wrap: wrap; gap: 10px; }
+  .inclui span { padding: 9px 14px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); font-weight: 500; font-size: .95rem; }
+  .inclui span b { color: var(--sol); font-weight: 600; margin-right: 6px; }
+
+  /* Como trabalho: a ordem é a informação */
+  .passos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: passo; }
+  .passos li { counter-increment: passo; display: grid; gap: 8px; align-content: start; padding-top: 18px; border-top: 2px solid var(--ink); }
+  .passos li::before { content: counter(passo, decimal-leading-zero); font-family: var(--mono); font-size: .85rem; color: var(--accent); }
+
+  /* Sobre e contato */
+  .dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .sobre { display: grid; gap: 16px; }
+  .contato { display: grid; gap: 18px; padding: clamp(24px, 4vw, 40px); border-radius: 16px; background: var(--accent); color: var(--accent-ink); }
+  .contato p { color: inherit; opacity: .9; }
+  .contato .botao { background: var(--accent-ink); color: var(--accent); border-color: var(--accent-ink); justify-self: start; }
+  .contato__dado { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: var(--mono); font-size: .95rem; }
+  .contato__dado button { font: inherit; font-size: .8rem; padding: 6px 10px; border-radius: 8px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; }
+
+  .rodape .miolo { padding-block: 28px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .9rem; color: var(--muted); }
+
+  @media (max-width: 900px) {
+    .abertura .miolo, .dupla { grid-template-columns: 1fr; }
+    .leque { min-height: 0; aspect-ratio: 4 / 3; max-width: 100%; }
+    .servicos { grid-template-columns: 1fr; }
+    .passos { grid-template-columns: 1fr 1fr; }
+    .projeto, .projeto:nth-child(-n + 2) { grid-column: span 3; }
+  }
+  @media (max-width: 560px) {
+    .menu { display: none; }
+    .passos { grid-template-columns: 1fr; }
+    .projeto, .projeto:nth-child(-n + 2) { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topo faixa">
+  <div class="miolo">
+    <a class="assinatura" href="#inicio">Arthur<span>.</span></a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#projetos">Projetos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Como trabalho</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="abertura faixa">
+    <div class="miolo">
+      <div class="abertura__texto">
+        <span class="rotulo">Sites, landing pages e automações</span>
+        <h1>Sites que levam o cliente direto para o seu <em>WhatsApp</em></h1>
+        <p>Sou Arthur, estudante de Inteligência Artificial na UFCAT. Crio sites rápidos, com a identidade do seu negócio, pensados para o celular e para transformar visitas em conversas.</p>
+        <div class="acoes">
+          <a class="botao" href="#projetos">Ver projetos</a>
+          <a class="botao botao--vazado" href="#contato">Pedir orçamento</a>
+        </div>
+        <div class="marcas-pequenas" aria-label="Ferramentas">
+          <span>HTML e CSS</span><span>JavaScript</span><span>Python</span><span>Inglês</span>
+        </div>
+      </div>
+      <div class="leque" aria-hidden="true">
+        <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/patas-e-cia</code></div><img src="img/patas-e-cia.jpg" alt=""></div>
+        <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/atelie-do-sorriso</code></div><img src="img/atelie-do-sorriso.jpg" alt=""></div>
+        <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/flora-odontologia</code></div><img src="img/flora-odontologia.jpg" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao--clara faixa" id="projetos">
+    <div class="miolo">
+      <div class="secao__cabeca">
+        <span class="rotulo">Projetos</span>
+        <h2>Cada site com a cara do negócio</h2>
+        <p class="aviso">Projetos demonstrativos com marcas fictícias, criados a partir de clínicas e veterinárias reais. Clique para abrir o site completo.</p>
+      </div>
+      <div class="projetos">
+        <a class="projeto" href="projetos/patas-e-cia/index.html">
+          <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/patas-e-cia</code></div><img src="img/patas-e-cia.jpg" alt="Tela inicial do site da Patas &amp; Cia, clínica veterinária em azul-marinho e laranja"></div>
+          <div class="projeto__info"><h3>Patas &amp; Cia</h3><span class="rotulo">Veterinária · Landing page</span><span class="projeto__abrir">Abrir projeto →</span></div>
+        </a>
+        <a class="projeto" href="projetos/atelie-do-sorriso/index.html">
+          <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/atelie-do-sorriso</code></div><img src="img/atelie-do-sorriso.jpg" alt="Tela inicial do site do Ateliê do Sorriso, clínica odontológica em creme e dourado"></div>
+          <div class="projeto__info"><h3>Ateliê do Sorriso</h3><span class="rotulo">Odontologia · Landing page</span><span class="projeto__abrir">Abrir projeto →</span></div>
+        </a>
+        <a class="projeto" href="projetos/coracao-pet/index.html">
+          <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/coracao-pet</code></div><img src="img/coracao-pet.jpg" alt="Tela inicial do site da Coração Pet, clínica veterinária em rosa e azul"></div>
+          <div class="projeto__info"><h3>Coração Pet</h3><span class="rotulo">Veterinária</span><span class="projeto__abrir">Abrir →</span></div>
+        </a>
+        <a class="projeto" href="projetos/flora-odontologia/index.html">
+          <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/flora-odontologia</code></div><img src="img/flora-odontologia.jpg" alt="Tela inicial do site da Flora Odontologia, em tons pastéis com folhas ao fundo"></div>
+          <div class="projeto__info"><h3>Flora Odontologia</h3><span class="rotulo">Estética</span><span class="projeto__abrir">Abrir →</span></div>
+        </a>
+        <a class="projeto" href="projetos/clara-mendes/index.html">
+          <div class="janela"><div class="janela__barra"><i></i><i></i><i></i><code>projetos/clara-mendes</code></div><img src="img/clara-mendes.jpg" alt="Tela inicial do site da Dra. Clara Mendes, consultório em azul-marinho"></div>
+          <div class="projeto__info"><h3>Dra. Clara Mendes</h3><span class="rotulo">Consultório</span><span class="projeto__abrir">Abrir →</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao faixa" id="servicos">
+    <div class="miolo">
+      <div class="secao__cabeca">
+        <span class="rotulo">Serviços</span>
+        <h2>O que posso fazer pelo seu negócio</h2>
+      </div>
+      <div class="servicos">
+        <article class="servico">
+          <h3>Sites e landing pages</h3>
+          <p>Uma página clara, com a sua identidade visual, que apresenta o negócio e leva o cliente a entrar em contato.</p>
+          <ul><li>Layout pensado para o celular</li><li>Botão de WhatsApp com mensagem pronta</li><li>Serviços, horário e localização</li></ul>
+        </article>
+        <article class="servico">
+          <h3>Automações em Python</h3>
+          <p>Scripts que fazem sozinhos as tarefas repetitivas do dia a dia, para você ganhar horas por semana.</p>
+          <ul><li>Organização de planilhas</li><li>Relatórios automáticos</li><li>Integração entre arquivos e sistemas</li></ul>
+        </article>
+        <article class="servico">
+          <h3>Rotinas financeiras e contábeis</h3>
+          <p>Trabalho em um escritório de contabilidade e levo essa experiência para os controles financeiros do seu negócio.</p>
+          <ul><li>Planilhas de controle</li><li>Conciliação e conferência de dados</li><li>Relatórios para tomada de decisão</li></ul>
+        </article>
+      </div>
+      <div class="secao__cabeca">
+        <span class="rotulo">Todo site inclui</span>
+      </div>
+      <div class="inclui">
+        <span><b>✓</b>Versão para celular</span>
+        <span><b>✓</b>Botão de WhatsApp</span>
+        <span><b>✓</b>Cores e logo da marca</span>
+        <span><b>✓</b>Perguntas frequentes</span>
+        <span><b>✓</b>Endereço e horário</span>
+        <span><b>✓</b>Carregamento rápido</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao--clara faixa" id="processo">
+    <div class="miolo">
+      <div class="secao__cabeca">
+        <span class="rotulo">Como trabalho</span>
+        <h2>Do primeiro contato ao site no ar</h2>
+      </div>
+      <ol class="passos">
+        <li><h3>Conversa</h3><p>Você me conta sobre o negócio, o público e o que espera do site.</p></li>
+        <li><h3>Primeira versão</h3><p>Monto o site com as suas cores, logo e serviços, e te envio para ver.</p></li>
+        <li><h3>Ajustes</h3><p>Mudamos textos, imagens e detalhes até ficar do jeito que você quer.</p></li>
+        <li><h3>Publicação</h3><p>Coloco o site no ar no seu endereço e te explico como pedir atualizações.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="secao faixa" id="contato">
+    <div class="miolo dupla">
+      <div class="sobre">
+        <span class="rotulo">Sobre mim</span>
+        <h2>Tecnologia a favor de pequenos negócios</h2>
+        <p>Estudo Inteligência Artificial na Universidade Federal de Catalão (UFCAT) e trabalho em um escritório de contabilidade, onde lido no dia a dia com rotinas contábeis e financeiras. Essa vivência me ajuda a entender como pequenos negócios funcionam por dentro.</p>
+        <p>Tenho mais familiaridade com Python, experiência com automação e me comunico em inglês. Uso ferramentas atuais para entregar com rapidez.</p>
+        <p>Gosto de aprender o que cada projeto pede e de explicar cada etapa com clareza.</p>
+      </div>
+      <div class="contato">
+        <h2>Vamos conversar sobre o seu projeto?</h2>
+        <p>Me conte o que você precisa e eu respondo com uma proposta clara, com prazo e valor definidos.</p>
+        <div id="contatos"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape faixa">
+  <div class="miolo">
+    <span>© 2026 Arthur · Catalão, Goiás</span>
+    <span>Projetos demonstrativos com marcas fictícias</span>
+  </div>
+</footer>
+
+<script>
+  // Preencha para mostrar os contatos na página. Vazio, a página pede para chamar pela plataforma.
+  const CONTATO = {
+    whatsapp: "", // só números, com DDI e DDD, ex.: 5564999999999
+    email: "",
+    perfil: "", // link do perfil no Workana ou 99Freelas
+  };
+
+  const caixa = document.getElementById("contatos");
+  const partes = [];
+  if (CONTATO.whatsapp) {
+    const link = document.createElement("a");
+    link.className = "botao";
+    link.href = "https://wa.me/" + CONTATO.whatsapp + "?text=" + encodeURIComponent("Olá, Arthur! Vi seu portfólio e quero conversar sobre um projeto.");
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "Chamar no WhatsApp";
+    partes.push(link);
+  }
+  if (CONTATO.perfil) {
+    const link = document.createElement("a");
+    link.className = "botao";
+    link.href = CONTATO.perfil;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "Ver meu perfil profissional";
+    partes.push(link);
+  }
+  if (CONTATO.email) {
+    const linha = document.createElement("div");
+    linha.className = "contato__dado";
+    const texto = document.createElement("span");
+    texto.textContent = CONTATO.email;
+    const copiar = document.createElement("button");
+    copiar.type = "button";
+    copiar.textContent = "Copiar e-mail";
+    copiar.addEventListener("click", () => {
+      navigator.clipboard.writeText(CONTATO.email)
+        .then(() => { copiar.textContent = "E-mail copiado"; })
+        .catch(() => { getSelection().selectAllChildren(texto); });
+    });
+    linha.append(texto, copiar);
+    partes.push(linha);
+  }
+  if (!partes.length) {
+    const aviso = document.createElement("p");
+    aviso.textContent = "Me chame pela plataforma em que você encontrou este portfólio.";
+    partes.push(aviso);
+  }
+  caixa.append(...partes);
+</script>
+</body>
+</html>
